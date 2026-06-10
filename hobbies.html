@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playball&family=Satisfy&display=swap" rel="stylesheet">
+
+    <title>Hobbies | My Personal Website</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Atikah" />
+    <meta name="description" content="My Hobbies Page" />
+    <meta name="keywords" content="hobbies, interests, personal website" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body id="top" class="hobbies-page">
+
+   <div class="header">
+      <video autoplay loop muted playsinline class="banner-image">
+          <source src="video/banner6.mp4" type="video/mp4">
+       </video>
+   </div>
+
+
+    <div class="navbar">
+        <a href="index.html">
+            <img src="images/home.png" alt="Home" class="nav-icon" />
+            Home
+        </a>
+
+        <a href="about.html">
+            <img src="images/about.png" alt="About Me" class="nav-icon" />
+            About Me
+        </a>
+
+        <a href="education.html">
+            <img src="images/education.png" alt="Education" class="nav-icon" />
+            Education
+        </a>
+
+        <a href="family.html">
+            <img src="images/family.png" alt="Family" class="nav-icon" />
+            Family
+        </a>
+
+        <a href="friends.html">
+            <img src="images/friends.png" alt="Friends" class="nav-icon" />
+            Friends
+        </a>
+
+        <a href="dessert.html">
+            <img src="images/dessert.png" alt="Favorite Dessert" class="nav-icon" />
+            Favorite Dessert
+        </a>
+
+        <a href="hobbies.html">
+            <img src="images/hobby.png" alt="Hobbies" class="nav-icon" />
+            Hobbies
+        </a>
+    </div>
+
+    <div class="content">
+        <h1>My Hobbies</h1>
+        <br />
+
+        <div class="hobby-gallery">
+            <img src="images/hobby1.jpg" alt="Hobby Picture1" class="hobby-image" />
+            <img src="images/hobby2.jpg" alt="Hobby Picture2" class="hobby-image" />
+            <img src="images/hobby3.jpg" alt="Hobby Picture3" class="hobby-image" />
+            <img src="images/hobby4.jpg" alt="Hobby Picture4" class="hobby-image" />
+            <img src="images/hobby5.jpg" alt="Hobby Picture5" class="hobby-image" />
+        </div>
+
+        <p>During my free time, I enjoy doing activities that make me happy and relaxed. I have numerous hobbies that I love to do. Having hobbies helps me reduce stress and improve my creativity. These are some of my hobby pictures. The first one is my brisk walk picture. I love to do this activity with my friends. It was taken at UiTM Kedah by my friend while we were doing this activity together. The second picture shows me rollerblading, an activity I do with my friends at 1 Avenue Mall, during mid sem break. The third picture is a holiday trip with my friends. This is my hobby if I have a long semester break. The fourth is playing badminton. Usually, I will do this activity at the Unit Sukan University with my friends. Lastly, crocheting. This is one of my hidden talents. Only my close friends and family know that I have that skill.</p>
+
+        <hr />
+
+        <h2>Virtual Hobby</h2>
+
+        <div class="virtual-gallery">
+            <img src="images/virtual1.jpg" alt="Virtual Hobby" class="virtual-hobby" />
+            <img src="images/virtual2.jpg" alt="Virtual Hobby" class="virtual-hobby" />
+        </div>
+
+        <p>Actually, playing online games is a rare thing that I do, yet I still enjoy playing online games. These two are the games that I would love to play. Mobile Legends, or ML, is a must-play game I turn to when I'm having an extreme difficulty and stressful time. This is the game that could minimise the stress I face, especially during the study and assignment week. Meanwhile, Block Blast is the game that I play when I lose interest in doing anything in this world, including scrolling TikTok, eating, and sleeping. This game frees up my mind and makes me feel like I don't have to think about anything.</p>
+
+        <hr />
+        
+            <h2>Things I Love To Do</h2>
+
+            <ul>
+                <li>Browsing social media</li>
+                <li>Brisk walk</li>
+                <li>Playing rollerblade</li>
+                <li>Playing badminton</li>
+                <li>Go for holiday trips</li>
+                <li>Listening music</li>
+                <li>Playing ukulele</li>
+                <li>Crocheting</li>
+                <li>Sewing</li>
+            </ul>
+        
+
+        <hr />
+
+       
+        <p class="back-to-right">
+            <a href="#top">Back To Top</a>
+        </p>
+    </div>
+
+    <audio id="bgmusic" autoplay="autoplay" loop="loop">
+        <source src="audio/melanie.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="footer">
+        <hr />
+        <p>
+            Copyright © 2026 Atikah.
+            <br />
+            Recommended Browser: Google Chrome
+            <br />
+            Resolution: 1366 x 768
+            <br />
+            Last Updated: May 2026
+        </p>
+    </div>
+
+    <script type="text/javascript">
+    window.onload = function() {
+        var bgmusic = document.getElementById("bgmusic");
+        var media = document.querySelectorAll("audio, video");
+
+        for (var i = 0; i < media.length; i++) {
+            media[i].addEventListener("play", function() {
+                if (this.id != "bgmusic") {
+                    bgmusic.pause();
+                }
+            });
+
+            media[i].addEventListener("pause", function() {
+                if (this.id != "bgmusic") {
+                    bgmusic.play();
+                }
+            });
+        }
+    };
+    </script>
+
+</body>
+</html>

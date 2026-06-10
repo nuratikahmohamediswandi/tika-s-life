@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Playball&amp;family=Satisfy&amp;display=swap" rel="stylesheet" />
+
+    <title>Home | My Personal Website</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Atikah" />
+    <meta name="description" content="My Personal Scrapbook Website" />
+    <meta name="keywords" content="personal website, scrapbook, uitm student, atikah" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body id="top">
+
+   <div class="header">
+      <video autoplay loop muted playsinline class="banner-image">
+          <source src="video/banner1.mp4" type="video/mp4">
+       </video>
+   </div>
+
+
+
+    <div class="marquee-container">
+        <div class="marquee-text">
+            Welcome to my personal website | This website is all about myself, my life, and what I like | I hope you guys enjoy visiting my scrapbook theme website
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="homepage">
+        <div class="title-area">
+            <h1>
+                Atikah<br />
+                Iswandi<br />
+            </h1>
+        </div>
+
+        <div class="left-photo">
+            <img src="images/photo1.jpg" alt="Photo 1"/>
+        </div>
+
+        <div class="center-photo">
+            <img src="images/me.jpg" alt="Main Photo"/>
+        </div>
+
+        <div class="right-photo">
+            <img src="images/photo2.jpg" alt="Photo 2"/>
+        </div>
+
+        <div class="start-button">
+            <a href="about.html">Let's Start</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <hr />
+
+        <audio id="bgmusic" autoplay="autoplay" loop="loop">
+            <source src="audio/billie.mp3" type="audio/mpeg" />
+        </audio>
+
+        <div class="footer-contacts">
+            <span class="contact-heading">Connect with me:</span>
+          
+            <a href="https://instagram.com/nrtkhzy" target="_blank" class="contact-link instagram-tag">
+                📸 @nrtkhzy
+            </a>
+          
+            <a href="mailto:nratikahiswandi@gmail.com" target="_blank" class="contact-link email-tag">
+                ✉️ nratikahiswandi@gmail.com
+            </a>
+       </div>
+
+        <hr />
+        <p>
+            <a>References :</a>
+            <br>
+            <a href="https://www.canva.com/">Canva</a>
+            <a href="https://www.tiktok.com/">Tik Tok</a>
+            <a href="https://www.pinterest.com/">Pinterest</a>
+            <a href="https://www.w3schools.com/#gsc.tab=0">W3School Online Web Tutorial</a></p>
+        <p>
+        <hr />
+            Copyright © 2026 Atikah.
+            <br />
+            Recommended Browser: Google Chrome
+            <br />
+            Resolution: 1366 x 768
+            <br />
+            Last Updated: May 2026
+        </p>
+    </div>
+
+    <script type="text/javascript">
+    window.onload = function() {
+        var bgmusic = document.getElementById("bgmusic");
+        var media = document.querySelectorAll("audio, video");
+
+        for (var i = 0; i < media.length; i++) {
+            media[i].addEventListener("play", function() {
+                if (this.id != "bgmusic") {
+                    bgmusic.pause();
+                }
+            });
+
+            media[i].addEventListener("pause", function() {
+                if (this.id != "bgmusic") {
+                    bgmusic.play();
+                }
+            });
+        }
+    };
+    </script>
+
+</body>
+</html>

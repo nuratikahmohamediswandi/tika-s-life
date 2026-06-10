@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playball&family=Satisfy&display=swap" rel="stylesheet">
+
+    <title>Favorite Dessert | My Personal Website</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Atikah" />
+    <meta name="description" content="My Favorite Desserts Page" />
+    <meta name="keywords" content="favorite dessert, dessert lover, personal website" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body id="top" class="dessert-page">
+
+    <div class="header">
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="images/pic1.jpg" alt="Dessert Banner 1" />
+            </div>
+
+            <div class="slide">
+                <img src="images/pic2.jpg" alt="Dessert Banner 2" />
+            </div>
+
+            <div class="slide">
+                <img src="images/pic3.jpg" alt="Dessert Banner 3" />
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">
+            <img src="images/home.png" alt="Home" class="nav-icon" />
+            Home
+        </a>
+
+        <a href="about.html">
+            <img src="images/about.png" alt="About Me" class="nav-icon" />
+            About Me
+        </a>
+
+        <a href="education.html">
+            <img src="images/education.png" alt="Education" class="nav-icon" />
+            Education
+        </a>
+
+        <a href="family.html">
+            <img src="images/family.png" alt="Family" class="nav-icon" />
+            Family
+        </a>
+
+        <a href="friends.html">
+            <img src="images/friends.png" alt="Friends" class="nav-icon" />
+            Friends
+        </a>
+
+        <a href="dessert.html">
+            <img src="images/dessert.png" alt="Favorite Dessert" class="nav-icon" />
+            Favorite Dessert
+        </a>
+
+        <a href="hobbies.html">
+            <img src="images/hobby.png" alt="Hobbies" class="nav-icon" />
+            Hobbies
+        </a>
+    </div>
+
+    <div class="content">
+        <h1>My Favorite Desserts</h1>
+
+        <p>
+            I really enjoy trying different kinds of desserts.
+            Sweet dishes make me happy, and it is one of my favorite things in life.
+        </p>
+
+        <hr />
+
+        <h2>My Top Favorite Desserts</h2>
+
+        <table border="1" cellpadding="10" cellspacing="0" width="85%" class="bubble-table">
+            <tr bgcolor="#f7c8d0">
+                <th>Desserts</th>
+                <th>Description</th>
+                <th>Rating</th>
+            </tr>
+            <tr align="center">
+                <td>Strawberry Shortcake</td>
+                <td>refreshing, fruity, and delicately sweet flavor</td>
+                <td rowspan="3">★★★★★</td>
+            </tr>
+            <tr align="center">
+                <td>Biscoff Cheesecake</td>
+                <td>It is a perfect combination of creamy and salty</td>
+            </tr>
+            <tr align="center">
+                <td>Chocolate Cake</td>
+                <td>balances deep, bitter-sweet cocoa notes with sugary sweetness</td>
+            </tr>
+        </table>
+
+        <hr />
+
+        <h2>Cikya Artworks</h2>
+
+        <div class="center-image">
+            <div class="scrapbook-photo">
+                <img src="images/dessert1.jpeg" alt="Dessert Picture" class="popup-image">
+                <img src="images/dessert2.jpeg" alt="Dessert Picture" class="popup-image">
+                <img src="images/dessert3.jpeg" alt="Dessert Picture" class="popup-image">
+            </div>
+        </div>
+
+        <p>In the family section, I have mentioned Cikya, who is a baker, and these are some of her artworks. As you can see, her artworks are so neat and amazing. She is my inspiration to try anything that I want and never give up on what I do until I achieve my goals.</p>
+
+        <hr />
+
+        <h2>Why I Love Dessert</h2>
+
+        
+            <p>Desserts can improve my mood, I enjoy discovering new dessert flavors, eating dessert with family and friends is fun, and desserts create happy memories</p>
+       
+
+        <hr />
+
+
+        <p class="back-to-right">
+            <a href="#top">Back To Top</a>
+        </p>
+    </div>
+
+    <audio id="bgmusic" autoplay="autoplay" loop="loop">
+        <source src="audio/melanie.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="footer">
+        <hr />
+        <p>
+            Copyright © 2026 Atikah.
+            <br />
+            Recommended Browser: Google Chrome
+            <br />
+            Resolution: 1366 x 768
+            <br />
+            Last Updated: May 2026
+        </p>
+    </div>
+
+    <script type="text/javascript">
+window.onload = function() {
+    var bgmusic = document.getElementById("bgmusic");
+    var media = document.querySelectorAll("audio, video");
+
+    for (var i = 0; i < media.length; i++) {
+        media[i].addEventListener("play", function() {
+            /* This is your original code */
+            if (this.id != "bgmusic") {
+                bgmusic.pause();
+            }
+
+            /* This is the new part: it loops through all videos and pauses the others */
+            for (var j = 0; j < media.length; j++) {
+                if (media[j] !== this && media[j].id !== "bgmusic") {
+                    media[j].pause();
+                }
+            }
+        });
+
+        media[i].addEventListener("pause", function() {
+            /* This is the new part: it makes sure ALL videos are stopped before turning your music back on */
+            var anyOtherPlaying = false;
+            for (var j = 0; j < media.length; j++) {
+                if (media[j] !== this && media[j].id !== "bgmusic" && !media[j].paused) {
+                    anyOtherPlaying = true;
+                }
+            }
+            
+            /* This is your original code */
+            if (!anyOtherPlaying && this.id != "bgmusic") {
+                bgmusic.play();
+            }
+        });
+    }
+};
+</script>
+
+</body>
+</html>

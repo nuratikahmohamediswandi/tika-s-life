@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+/*==================================================
+                     1. BODY
+====================================================*/
+body {
+    background-color: #f9efe1;
+    font-family: Arial, Helvetica, sans-serif ;
+    margin: 0;
+    padding: 0;
+    color: #444444;
+}
+
+/* Page Specific Background Colors */
+.about-page { background-color: #D2D2CF; }
+.education-page { background-color: #F5CA7B; }
+.family-page { background-color: #fff8dc; }
+.friends-page { background-color: #BAED91; }
+.dessert-page { background-color: #BC9E82; }
+.hobbies-page { background-color: #C3B1E1; }
+
+/*==================================================
+                     2. HEADER & STATIC BANNER
+====================================================*/
+.header {
+    text-align: center;
+    background-color: #ffdce5;
+}
+
+.banner-image {
+    width: 99%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    border-bottom: 5px dashed #f7a8b8;
+}
+
+/*==================================================
+                     3. NAVIGATION BAR
+====================================================*/
+.navbar {
+    background-color: #f7a8b8;
+    padding: 15px;
+    text-align: right;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px;
+    padding: 10px 15px;
+    background-color: #f7a8b8;
+    border-radius: 15px;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar a:hover {
+    background-color: #ff5d8f;
+    color: white;
+}
+
+/*==================================================
+                     4. MAIN LAYOUT BLOCKS
+====================================================*/
+.content {
+    width: 80%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #cccccc;
+}
+
+/* Apply Dashed Borders to Content and Sidebar Cards */
+.content,
+.sidebar {
+    border: 3px dashed #f7c8d0;
+}
+
+/*==================================================
+                     5. TYPOGRAPHY
+====================================================*/
+h1 {
+    font-family: 'Playball', cursive;
+    color: #ff5d8f;
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    display: block;
+    font-family: 'Playball', cursive;
+    font-size: 1.8rem;
+    color: #d94f70;
+    font-weight: normal;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #f7a8b8;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+ul {
+    line-height: 2;
+}
+
+/*==================================================
+                 6. BUBBLE TABLES
+====================================================*/
+
+.bubble-table {
+    margin: 30px auto;
+    width: 85% !important;
+    border-collapse: separate;   /* Allows every cell to break away into bubbles */
+    border-spacing: 12px 15px;   /* Gaps between bubbles horizontally and vertically */
+    border: none;                 /* Removes the ugly old default black outer border */
+    background: transparent !important; /* Forces the table background to be transparent */
+}
+
+/* 1. TURNS THE HEADERS (NAME, RELATIONSHIP, DESCRIPTION) INTO BUBBLES */
+.bubble-table th {
+    background-color: #f7c8d0 !important; /* Applies your signature pink to the bubble */
+    color: #444444;                      
+    font-size: 16px;
+    padding: 12px 20px;
+    
+    /* This completely rounds all 4 corners of every header cell */
+    border-radius: 20px !important;       
+    border: none !important;              /* Removes any harsh grid borders */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft drop shadow */
+}
+
+/* 2. TURNS ALL CONTENT CELLS INTO BUBBLES */
+.bubble-table td {
+    background-color: #ffffff;   /* Pure white bubble background */
+    color: #555555;
+    font-size: 15px;
+    padding: 15px 20px;          
+    
+    /* Adds a clean, solid pink border all the way around every content cell */
+    border: 2px solid #f7c8d0 !important; 
+    
+    /* This completely rounds all 4 corners of every single content cell */
+    border-radius: 20px !important; 
+    
+    vertical-align: middle;      /* Keeps all text perfectly centered inside its bubble */
+    box-shadow: 0 4px 6px rgba(247, 200, 208, 0.15); /* Soft, cute pink glow */
+}
+
+/* 3. STYLES TALL ROWSPAN BUBBLES PERFECTLY */
+.bubble-table td[rowspan] {
+    background-color: #ffffff;
+    border: 2px solid #f7c8d0 !important;
+    border-radius: 25px !important;
+}
+/*==================================================
+                     7. IMAGES & VIDEOS (GLOBAL)
+====================================================*/
+img {
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.profile {
+    float: right;
+    margin-left: 20px;
+    border: 5px solid #f7c8d0;
+}
+
+.center-image {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0; 
+}
+
+.center-video {
+    text-align: center;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+
+audio,
+video {
+    display: block;
+    margin: 20px auto;
+    border-radius: 100px;
+    overflow: hidden;
+
+    /* 🌟 THE SMOOTHNESS FIX: Forces the browser to anti-alias the corners */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
+    
+    /* Forces your graphic card to smoothly render the edges */
+    transform: translateZ(0);
+}
+
+/*==================================================
+                     8. DECORATIVE EFFECTS & HOVERS
+====================================================*/
+button {
+    background-color: #ff8fab;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5d8f;
+}
+
+.popup-image {
+    transition: 0.4s;
+}
+
+.popup-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #888888;
+}
+
+/*==================================================
+                     9. HOMEPAGE & INTRO LAYOUTS
+====================================================*/
+.opening-video {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    display: block;
+}
+
+.homepage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/homebg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.title-area {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 300px;
+}
+
+.title-area h1 {
+    font-family: 'Playball', cursive;  
+    color: #444444;       
+    font-size: 3.5rem;    
+    line-height: 1.2;     
+    letter-spacing: 1px; 
+    margin: 0;
+    font-weight: normal;  
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5); 
+}
+
+.left-photo { position: absolute; left: 50px; bottom: 60px; }
+.left-photo img { width: 300px; height: 280px; object-fit: cover; }
+
+.center-photo { position: absolute; left: 50%; top: 40px; transform: translateX(-50%); }
+.center-photo img { width: 380px; height: 520px; object-fit: cover; }
+
+.right-photo { position: absolute; right: 60px; top: 40px; }
+.right-photo img { width: 300px; height: 280px; object-fit: cover; }
+
+.start-button { position: absolute; right: 120px; bottom: 120px; }
+.start-button a {
+    background-color: #f7a8b8;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #444444;
+}
+.start-button a:hover {
+    background-color: #ff5d8f;
+    color: white;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    background-color: #f7a8b8;
+    color: #444444;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    border: 3px dashed white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px #999999;
+
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*==================================================
+                     10. GALLERY SECTIONS
+====================================================*/
+/* TikTok Video Block */
+.tiktok-video {
+    display: flex;            
+    justify-content: center;  
+    gap: 20px;                
+    flex-wrap: wrap;          
+    margin: 30px auto;        
+    width: 100%;
+}
+
+.tiktok-video video {
+    width: 250px;             
+    height: 450px;            
+    object-fit: cover;        
+    border-radius: 15px;      
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Dessert Images / Hobbies Frames */
+.scrapbook-photo img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover; 
+    display: inline-block; 
+    margin: 50px; 
+}
+
+.hobby-image {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    background-color: #EDC8FF;
+    padding: 10px 10px 30px 10px;
+    border: 2px solid #dddddd;
+    box-shadow: 4px 4px 10px #999999;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.4s;
+}
+
+.hobby-image:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 8px 8px 20px #888888;
+}
+
+.hobby-gallery {
+    text-align: center;
+}
+
+/* Virtual Hobby Blocks */
+.virtual-hobby {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #85B244;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #999999;
+    margin: 15px;
+    transition: 0.4s;
+}
+
+.virtual-hobby:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px #888888;
+    border-color: #EDC8FF;
+}
+
+.virtual-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/*==================================================
+                     11. POLAROID ELEMENTS
+====================================================*/
+.polaroid {
+    display: inline-block;
+    background-color: #ffffff;
+    width: 280px; 
+    padding: 16px 16px 36px 16px; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.12);
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    margin: 20px;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;   
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+}
+
+.polaroid .caption, 
+.polaroid p, 
+.polaroid figcaption {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 1.4rem;
+    color: #3a322d; 
+    font-family: 'Comic Sans MS', 'Brush Script MT', cursive, sans-serif; 
+}
+
+.polaroid.tilt-left  { transform: rotate(-4deg); }
+.polaroid.tilt-right { transform: rotate(5deg); }
+.polaroid.tilt-left-slight  { transform: rotate(-2deg); }
+.polaroid.tilt-right-slight { transform: rotate(3deg); }
+
+.polaroid::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 35%;
+    width: 85px;
+    height: 26px;
+    background-color: rgba(238, 222, 192, 0.55); 
+    backdrop-filter: blur(1px);
+    transform: rotate(-2deg);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.06); 
+    box-shadow: 12px 18px 28px rgba(0, 0, 0, 0.22); 
+    z-index: 10; 
+}
+
+/* Polaroid Taped Variant */
+.polaroid-taped {
+    display: inline-block;
+    background-color: #BAED91;
+    width: 280px;
+    padding: 10px 25px 10px 14px;
+    box-shadow: 2px 4px 12 rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin: 12px;
+    transform: rotate(3deg);
+}
+
+.polaroid-taped img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.polaroid-taped::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -20px;
+    width: 65px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.35); 
+    border-left: 1px dashed rgba(0,0,0,0.1);  
+    border-right: 1px dashed rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    transform: rotate(-40deg);
+}
+
+.polaroid-taped::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -15px;
+    width: 65px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-left: 1px dashed rgba(0,0,0,0.1);
+    border-right: 1px dashed rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    transform: rotate(-35deg);
+}
+
+/* ==========================================================================
+                               SCRAPBOOK TABLE 
+   ========================================================================== */
+.scrapbook-table {
+    width: 90%;     
+    border-collapse: collapse;
+    background: transparent;
+    border: none;
+    margin: 50px auto;         
+}
+
+.scrapbook-table tr {
+    border: none;
+    background: transparent;
+}
+
+.scrapbook-table td {
+    width: 33.33%;             
+    vertical-align: middle;
+    text-align: center;        
+    padding: 0px 20px;        
+
+    font-family: sans-serif;
+    color: #4a3728;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border: none;
+    background: transparent;
+}
+/*==================================================
+                   12. EDUCATION 
+====================================================*/
+.education-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.education-section h2 {
+    color: #d94f70;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.school-card {
+    display: flex;
+    background: #F5CA7B;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.school-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.school-media {
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+.school-link {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.school-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #fafafa;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.click-badge {
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 62, 80, 0.85);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.school-link:hover .click-badge { opacity: 1; }
+.school-link:hover .school-logo { transform: scale(1.1); }
+
+.school-info { flex-grow: 1; }
+.school-info h3 { margin: 0 0 5px 0; color: #444444; font-size: 1.4rem; }
+.school-meta {
+    margin: 0 0 12px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #d94f70; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.school-desc { margin: 0; color: #555555; line-height: 1.6; font-size: 1rem; }
+
+@media (max-width: 600px) {
+    .school-card { flex-direction: column; text-align: center; padding: 20px; }
+    .school-media { margin-right: 0; margin-bottom: 20px; }
+}
+
+/*==================================================
+                     13. FOOTER CONTACTS
+====================================================*/
+.footer-contacts {
+    margin: 20px 0 15px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-heading {
+    display: block;
+    font-family: 'Playball', cursive;
+    font-size: 1.8rem;
+    color: #d94f70;
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 5px 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #d94f70;
+    background-color: #fffafb;
+    border: 2px dashed #f7a8b8;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px #f7c8d0;
+    transition: all 0.2s ease-in-out;
+}
+
+.instagram-tag { transform: rotate(-1.5deg); }
+.email-tag { transform: rotate(1deg); }
+
+.contact-link:hover {
+    color: #fff5f7;
+    background-color: #ff5d8f;
+    border-color: #ff8fab;
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7c8d0;
+    font-size: 14px;
+}
+
+/*==================================================
+        14. AUTOMATIC FADING BANNER SLIDESHOW
+====================================================*/
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    left: 0%;
+    height: 325px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 99%;
+    height: 100%;
+    opacity: 0;
+    animation: slideshow 9s infinite;
+}
+
+/* Keeps your 15px rounded corners and pink dashed border on active slides! */
+.header .slide img,
+.slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px !important;
+    margin: 10px !important;
+    border-bottom: 5px dashed #f7a8b8;
+}
+
+/* Slide Loop Sequence Timings */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 3s; }
+.slide:nth-child(3) { animation-delay: 6s; }
+
+@keyframes slideshow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/*==================================================
+                     15. BACK TO TOP
+====================================================*/
+.back-to-right {
+    display: block;
+    clear: both;          
+    text-align: right;    
+    width: 100%;          
+    margin-top: 30px;     
+    margin-bottom: 10px;
+}
+
+.back-to-right a {
+    display: inline-block;
+    float: right;         
+    margin-right: 20px;   
+    background-color: #ff8fab;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.back-to-right a:hover {
+    background-color: #ff5d8f;
+    transform: scale(1.05);
+}
+
+.back-to-right::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*================================
+             APPS
+==================================*/
+
+.apps-website {
+    margin: 20px 0 15px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.apps-heading {
+    display: block;
+    font-family: 'Playball', cursive;
+    font-size: 1.8rem;
+    color: #d94f70;
+    margin-bottom: 10px;
+}
+
+.apps-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 5px 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #d94f70;
+    background-color: #fffafb;
+    border: 2px dashed #f7a8b8;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px #f7c8d0;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-link:hover {
+    color: #fff5f7;
+    background-color: #ff5d8f;
+    border-color: #ff8fab;
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7c8d0;
+    font-size: 14px;
+}
+
+/*==================================================
+                     2. HEADER & STATIC BANNER
+====================================================*/
+.header {
+    text-align: center;
+    background-color: #ffdce5;
+}
+
+.banner-image {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    border-bottom: 5px dashed #f7a8b8;
+    border-radius: 0 !important; /* This stops the 100px global roundness from breaking your banner shape! */
+    margin: 0 !important;        /* Clears out default image margins for a clean fit */
+}

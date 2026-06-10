@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Playball&amp;family=Satisfy&amp;display=swap" rel="stylesheet" />
+
+    <title>Home | My Personal Website</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Atikah" />
+    <meta name="description" content="My Personal Scrapbook Website" />
+    <meta name="keywords" content="personal website, scrapbook, uitm student, atikah" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body id="top" class="about-page">
+
+   <div class="header">
+      <video autoplay loop muted playsinline class="banner-image">
+          <source src="video/banner2.mp4" type="video/mp4">
+       </video>
+   </div>
+
+    <div class="navbar">
+        <a href="index.html">
+            <img src="images/home.png" alt="Home" class="nav-icon" />
+            Home
+        </a>
+
+        <a href="about.html">
+            <img src="images/about.png" alt="About Me" class="nav-icon" />
+            About Me
+        </a>
+
+        <a href="education.html">
+            <img src="images/education.png" alt="Education" class="nav-icon" />
+            Education
+        </a>
+
+        <a href="family.html">
+            <img src="images/family.png" alt="Family" class="nav-icon" />
+            Family
+        </a>
+
+        <a href="friends.html">
+            <img src="images/friends.png" alt="Friends" class="nav-icon" />
+            Friends
+        </a>
+
+        <a href="dessert.html">
+            <img src="images/dessert.png" alt="Favorite Dessert" class="nav-icon" />
+            Favorite Dessert
+        </a>
+
+        <a href="hobbies.html">
+            <img src="images/hobby.png" alt="Hobbies" class="nav-icon" />
+            Hobbies
+        </a>
+    </div>
+
+    <div class="content">
+        <h1>About Me</h1>
+
+        <img src="images/me.jpg" alt="My Picture" width="250" class="profile">
+
+        <p>
+            Hello! My name is Nuratikah Mohamed Iswandi. You can call me Atikah. I was born in 2006 at Hospital Tanjung Karang, and this year I am 20 years old. I am a Malaysian citizen who stays in Selangor. My date of birth falls on 15.6.2006. I am a loud girl with a quiet personality. I love to do numerous activities that seem fun and joyful, including extreme and indoor activities. I love to be friends with all types of people except those who give a negative impact towards me. I really don't care what other people think about me or how they see me. All I know is that I love myself and my personality. Some people might say I am a bad person, and some people might say I am the nicest person they have ever met, and for me, both are true, because I treat people the way they deserve. I have the ability to decide what I want or stop dealing with it if it's not what I truly want. I also have the ability to speak up if I think it's nonsense. I love everyone who comes into my life or already exists in my life, which are my friends and my family. I love to listen stories and problems that my friends and family had. I will be a good listener and try to give advice, or be their best supporter if they need me. Even so, on a normal and daily day, I love to be sarcastic with them because I like to see their aggressiveness, offensive, and defensive side.
+        </p>
+
+        <p> 
+            Currently, I am a UiTM student who is taking part in the Diploma in Information Science. At first, I found it difficult to catch up with this course since I don't really like to expose myself to everyone, and the study environment was quite different from my secondary school. Now I'm already in semester 4, and my thoughts about this course have changed. I do really enjoy learning new things, do collaboration work, and creating creative projects.
+        </p>
+
+
+            <h2>Fun Facts About Me</h2>
+
+        <div class="center-image">
+            <div class="scrapbook-photo">
+                <img src="images/fact1.jpeg" alt="Fact1" class="popup-image">
+                <img src="images/fact2.jpeg" alt="Fact2" class="popup-image">
+                <img src="images/fact3.jpeg" alt="Fact3" class="popup-image">
+                <img src="images/fact4.jpeg" alt="Fact4" class="popup-image">
+                <img src="images/fact5.jpeg" alt="Fact5" class="popup-image">
+            </div>
+        </div>
+
+             <p>I have an ambivert personality, I am a friendly person, I have a creative imagination, a critical thinker in solving problems, eager to help other people, I like taking pictures, I have numerous hidden talents, I enjoy my own company, I enjoy gathering activities         
+            </p> 
+
+        <hr />
+
+            <h2>Things</h2>
+
+            <video width="500" height="300" controls="controls">
+                <source src="video/myself.mp4" type="video/mp4" />
+            </video>
+
+        <p class="back-to-right">
+            <a href="#top">Back To Top</a>
+        </p>
+    </div>
+
+    <audio id="bgmusic" autoplay="autoplay" loop="loop">
+        <source src="audio/melanie.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="footer">
+        <hr />
+        <p>
+            Copyright © 2026 Atikah.
+            <br />
+            Recommended Browser: Google Chrome
+            <br />
+            Resolution: 1366 x 768
+            <br />
+            Last Updated: May 2026
+        </p>
+    </div>
+
+    <script type="text/javascript">
+    window.onload = function() {
+        var bgmusic = document.getElementById("bgmusic");
+        var media = document.querySelectorAll("audio, video");
+
+        for (var i = 0; i < media.length; i++) {
+            media[i].addEventListener("play", function() {
+                if (this.id != "bgmusic") {
+                    bgmusic.pause();
+                }
+            });
+
+            media[i].addEventListener("pause", function() {
+                if (this.id != "bgmusic") {
+                    bgmusic.play();
+                }
+            });
+        }
+    };
+    </script>
+
+</body>
+</html>
